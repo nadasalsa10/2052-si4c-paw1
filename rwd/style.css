@@ -3,14 +3,25 @@
     /* element selector body */
     body {
         background-color: blue;
+        text-align: center;
+        color: aliceblue;
+
+        padding: 0;
+        margin: 0;
     }
-    img {
-        width: 100&;
+    
+    .a {
+        width: 100%;
+        float: left;
+        padding: 5px;
     }
 
-    .padding-10{
-        padding: 10px;
+    .b {
+        padding: 5px;
+        float: left;
+        width: 100%;
     }
+        
     /* clear floar column */
     .row {
         clear: both;
@@ -23,14 +34,13 @@
     body {
         background-color: green;
     }
-    .col-md-50{
+    
+    .a {
         width: 50%;
-        float: left;
     }
-    .col-md-100{
-        width: 1000%;
+    .b {
+        width: 100%;
     }
-}
 
 /* Desktop min-width: 600px*/
 @media screen and (min-width: 992px){
@@ -38,14 +48,10 @@
     body {
         background-color: red;
     }
-    /* Class Selector */
-    .col-lg-25{
+    .a {
         width: 25%;
-        float: left;
     }
-    /* Class Selector */
-    .col-lg-50{
+    .b{
         width: 50%;
-        float: left;
     }
 }
