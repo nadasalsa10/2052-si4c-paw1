@@ -1,9 +1,11 @@
 let NPM = document.getElementById("NPM");
 let Nama = document.getElementById("Nama");
+let imageurl = document.getElementById("imageurl");
 
 function simpan() {
     console.log(NPM.value)
     console.log(Nama.value)
+    console.log(imageurl.value)
 
     // localStorage.setItem("NPM", NPM.value)
     // localStorage.setItem("Nama", Nama.value)
@@ -19,9 +21,11 @@ function simpan() {
     console.log(data)
 
     // simpan value npm dan nama ke dalam object data
+    // variabel nya harus sama dengan variabel yang ada di local storage (NPM dan Nama)
     data.push({
-        npm: npm.value,
-        nama: nama.value
+        NPM: NPM.value,
+        Nama: Nama.value,
+        imageurl: imageurl.value,
     })
     console.log(data)
 
@@ -38,10 +42,13 @@ function tampil() {
     // clear element ul id =list-mhs
     document.getElementById("list-mhs").innerHTML = ""
     //lakukkan perulangan (foreach)
-    hasil.array.forEach(element => {
+    hasil.forEach(element => {
         //console.log(element)
-        document.getElementById("list-mhs").innerHTML += `<li>${element.npm} ${element.nama} </li>`
-        
+        document.getElementById("list-mhs").innerHTML += `<div class="col-lg-4" col-md-6">
+        <h4 
+        class="text-primary">${element.Nama}</h4> <h6 class="text-danger"> ${element.NPM}</h6>
+        <img src="${element.imageurl}" alt="Foto ${element.Nama}" class="img-fluid">
+        </div>`
     });
 
 }
